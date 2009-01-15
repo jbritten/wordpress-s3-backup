@@ -139,7 +139,7 @@ end
   
   # Open a connection to Amazon S3  
   def s3_connect
-    AWS::S3::Base.establish_connection!(:access_key_id => "#{S3ACCESSKEYID}", :secret_access_key => "#{S3SECRETKEY}")
+    AWS::S3::Base.establish_connection!(:access_key_id => "#{S3ACCESSKEYID}", :secret_access_key => "#{S3SECRETKEY}", :use_ssl => true)
   end
 
   # Zip up the files and send to S3
