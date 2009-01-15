@@ -8,7 +8,7 @@ USAGE
 
   $ rake -f wordpress.rake -T
     rake wordpress:backup              # Backup both the WordPress database and site
-    rake wordpress:backup:database     # Backup the WordPress database to S3
+    rake wordpress:backup:db     	   # Backup the WordPress database to S3
     rake wordpress:backup:site         # Backup the WordPress site to S3
     rake wordpress:manage:list         # List all your backups
     rake wordpress:manage:cleanup      # Remove all but the last 10 most recent backups or optionally specify KEEP=5 to keep the last 5
