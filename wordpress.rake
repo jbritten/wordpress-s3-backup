@@ -16,19 +16,22 @@
 #
 # Prerequisites
 #
-#   1.  You'll need to install the aws-s3 gem.
-#       $ sudo gem install aws-s3
+#   1.  You'll need to install the dependencies.
+#
+#       $ gem install bundler
+#       $ bundle install
 #
 #   2.  Specify your database credentials, site path, and Amazon S3 access keys below.
 #
 # Execution
 #
-#   $ rake -f wordpress.rake wordpress:backup
+#   $ bundle exec rake -f wordpress.rake wordpress:backup
 #
 # Automation
 #
 #   Put this in your crontab to run nightly backups at 3am:
-#     0 3 * * * rake -f /PATH/TO/wordpress.rake wordpress:backup
+#
+#     0 3 * * * /bin/bash -l -c 'cd /PATH/TO && PATHTOSITE="/apps/cool" bundle exec rake -f wordpress.rake wordpress:backup'
 #
 
 require 'rubygems'
